@@ -1,8 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayarlar = require('./ayarlar.json');
 
-var prefix = ayarlar.prefix;
+var prefix = "m!";
+var owner = "361100685863026688"; 
+
+
+client.login(process.env.BOT_TOKEN)
 
 client.on("ready", () => {
   client.user.setGame("🔥v0.1🔥  ✨NirvA✨ ", "https://www.twitch.tv/turkish_coffee") 
@@ -97,4 +100,4 @@ client.on("message", message => {
   }
 });
 
-client.login(ayarlar.token);
+
